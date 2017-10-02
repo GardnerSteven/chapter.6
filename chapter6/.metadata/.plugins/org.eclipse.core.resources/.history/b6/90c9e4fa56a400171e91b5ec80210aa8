@@ -1,0 +1,51 @@
+package gamezone;
+
+import javax.swing.JOptionPane;
+
+public class RandomGuessLoop 
+{
+
+	public static void main(String[] args) 
+	{
+	
+
+		displayRunGame();
+		
+	
+		
+	}
+	public static void displayRunGame()
+	{
+		
+		int guess;
+		int result;
+		String resultString;
+		String msg;
+		int low = 1;
+		int high = 100;
+		
+		int score = 0;
+		result = low + (int)(Math.random() * high);
+	do {
+		
+		resultString = JOptionPane.showInputDialog(null, "Try to guess my number between " + low + " and " + high);
+		guess = Integer.parseInt(resultString);
+		score++;
+		if(guess==result)
+		{
+			msg = "You win";
+		}
+		else
+			if(guess<result)
+			{
+				msg = "Too Low ";
+				++score;
+			}
+			else
+				msg = "Your Guess was to high";
+				score++;
+		JOptionPane.showMessageDialog(null, msg + "Your Score was " + score);
+			}while(guess != result);
+	
+		}
+	}

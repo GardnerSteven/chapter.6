@@ -1,0 +1,36 @@
+package exercises;
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class PythagoreanTheorum 
+{
+
+	public static void main(String[] args) 
+	{
+		double sideA,sideB,sideC;
+		
+		Scanner input = new Scanner(System.in);
+		String sideChoiceString = null;
+		
+		System.out.println(" Trying to solve a right triangle Huh? \nPLease enter which side your trying to solve for>>> A\nB\nC");
+		sideChoiceString = input.nextLine();
+
+		if(sideChoiceString.equalsIgnoreCase(sideChoiceString));
+		{
+			System.out.println("Please enter side B");
+			
+			System.out.println("Please enter side c");
+			
+			sideA = Math.sqrt(sideC) - Mathqrt(sideB);
+			
+			System.out.println("Side A is " + sideA);
+			
+			System.out.println("Side B is " + sideB);
+			
+			System.out.println("Side C is " + sideC);
+		}
+	}
+
+}
